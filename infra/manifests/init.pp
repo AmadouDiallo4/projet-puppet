@@ -23,8 +23,8 @@ node server0 {
 	}
 # telechargement dokuwiki
 
-	file { '/usr/src/dokuwiki/':
+	file { ' /usr/src/dokuwiki/':
 		ensure => present,	
-		source  => 'https//download.dokuwiki.org/src/dokuwiki-stable.tgz',
+		source  => 'http:s//download.dokuwiki.org/src/dokuwiki-stable.tgz',
 	}	
 }
