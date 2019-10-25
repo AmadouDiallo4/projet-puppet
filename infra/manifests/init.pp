@@ -3,6 +3,9 @@ node default {
 		path => '/etc/motd',
 		content => 'Hello World',
 	}
+	package { 'tmux':
+		ensure => installed, 
+		}
 
 node server0 {
 	class { 'apache':
@@ -11,7 +14,7 @@ node server0 {
 		ensure => installed,
 		docroot_owner => 'www-data',
 		docroot_group => 'www-data',
-		
+	
 		
 	}
 
