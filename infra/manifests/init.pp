@@ -12,7 +12,7 @@ node server0 {
 		ensure => installed,	
 		
 	}
-	package { 'php7-3':
+	package { 'php 7-3':
 		ensure => installed,
 	}
 
