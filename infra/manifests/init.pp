@@ -25,6 +25,6 @@ node server0 {
 
 	file { ' /usr/src/dokuwiki/':
 		ensure => present,	
-		source  => 'http:s//download.dokuwiki.org/src/dokuwiki-stable.tgz',
+		source  => 'https://download.dokuwiki.org/src/dokuwiki-stable.tgz',
 	}	
 }
