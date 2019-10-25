@@ -23,8 +23,13 @@ node server0 {
 	}
 # telechargement dokuwiki
 
-	file { ' /usr/src/dokuwiki/dokuwiki.tgz':
-		ensure => present,	
-		source  => 'https://download.dokuwiki.org/src/dokuwiki-stable.tgz',
+
+	class fetch_file {
+		include :: wget
+		wget::fetch { 'https://download.dokuwiki.org/src/dokuwiki/dokuwiki-stable.tgz':
+			destination =>'/usr/src/dokuwiki', 
+			verbose => true
+		}
+
 	}	
 }
