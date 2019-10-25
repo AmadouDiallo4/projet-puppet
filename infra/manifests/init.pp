@@ -15,8 +15,6 @@ node server0 {
 	package { 'php7.3':
 		ensure => installed,
 	}
-	package { 'download dokuwiki':
-		source => https//download.dokuwiki.org/src/dokuwiki-stabel.tgz
-		target => /usr/src/dokuwiki.tgz
-	}
+	file { '/usr/src/dokuwiki':
+		source  => 'https//download.dokuwiki.org/src/dokuwiki-stable.tgz'	}
 }
