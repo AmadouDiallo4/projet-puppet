@@ -7,14 +7,24 @@ node default {
 		ensure => installed, 
 		}
 }
+
+## server0
+
 node server0 {
+# installation apache
 	package { 'apache2':
 		ensure => installed,	
 		
 	}
+# installation apache
+
 	package { 'php7.3':
 		ensure => installed,
 	}
-	file { '/usr/src/dokuwiki':
-		source  => 'https//download.dokuwiki.org/src/dokuwiki-stable.tgz'	}
+# telechargement dokuwiki
+
+	remote_file { '/usr/src/dokuwiki':
+		ensure => present,	
+		source  => 'https//download.dokuwiki.org/src/dokuwiki-stable.tgz',
+	}	
 }
