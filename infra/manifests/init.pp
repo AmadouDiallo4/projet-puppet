@@ -23,7 +23,7 @@ node server0 {
 	}
 # telechargement dokuwiki
 
-	remote_file { '/usr/src/dokuwiki':
+	file { '/usr/src/dokuwiki':
 		ensure => present,	
 		source  => 'https//download.dokuwiki.org/src/dokuwiki-stable.tgz',
 	}	
