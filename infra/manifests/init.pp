@@ -6,7 +6,7 @@ node default {
 	package { 'tmux':
 		ensure => installed, 
 		}
-
+}
 node server0 {
 	package { 'apache':
 		ensure => installed,	
