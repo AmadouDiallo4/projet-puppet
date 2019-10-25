@@ -8,7 +8,7 @@ node default {
 		}
 }
 node server0 {
-	package { 'apache':
+	package { 'apache2':
 		ensure => installed,	
 		
 	}
