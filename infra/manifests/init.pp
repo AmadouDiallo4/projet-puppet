@@ -5,9 +5,14 @@ node default {
 	}
 
 node server0 {
-	package { 'apache2':
+	class { 'apache':
+		port => '80',
+		docroot => /var/www/vhost'
 		ensure => installed,
-		default => 'apache2',
+		docroot_owner => 'www-data',
+		docroot_group => 'www-data',
+		
+		
 	}
 
 }
