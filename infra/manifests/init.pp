@@ -1,5 +1,5 @@
 node default {
-	files { 'fill motd':
+	file { 'fill motd':
 		path => '/etc/motd',
 		content => 'Hello World',
 	}
